@@ -1,0 +1,18 @@
+{
+  "name": "calculate-energy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Danny Feliz <dannyfeliz08@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cli-table3": "^0.5.1",
+    "colors": "^1.3.2",
+    "lodash": "^4.17.11",
+    "nodemon": "^1.18.4"
+  }
+}
