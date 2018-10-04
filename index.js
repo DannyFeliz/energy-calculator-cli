@@ -10,14 +10,13 @@ const line = readline.createInterface({
   terminal: false
 });
 
-const K = 8987551787;
-const MINIMUN_CHARGE = 0.000001;
-
 const chargesList = [];
 init();
 
 let chargesCount = 0;
 function init() {
+  console.log("App para Calcular Fuerzas Eléctricas - Danny Feliz 2015-2015".yellow.bold);
+  console.log("============================================================".yellow.bold);
   console.log("");
   line.question("Introduzca el número de cargas que deseas calcular: ".cyan, async localChargesCount => {
     localChargesCount = Number(localChargesCount);
@@ -67,7 +66,7 @@ function getCharges(index) {
 }
 
 function calculateForce() {
-  line.question(`\nIntroduzca la fuerza que desea calcular (1-${chargesCount}): `.cyan, async selectedCharge => {
+  line.question(`\nIntroduzca la fuerza que desea calcular (1-${chargesList.length}): `.cyan, async selectedCharge => {
     selectedCharge = Number(selectedCharge) - 1;
 
     if (!chargesList[selectedCharge]) {
@@ -90,6 +89,9 @@ function calculateForce() {
 
       const charge1 = chargesList[i];
       const charge2 = chargesList[selectedCharge];
+
+      const K = 8987551787;
+      const MINIMUN_CHARGE = 0.000001;
 
       const squareSum = Math.sqrt(
         Math.pow(charge2.X - charge1.X, 2) + Math.pow(charge2.Y - charge1.Y, 2) + Math.pow(charge2.Z - charge1.Z, 2)
