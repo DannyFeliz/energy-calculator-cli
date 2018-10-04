@@ -94,6 +94,7 @@ function calculateForce() {
       const squareSum = Math.sqrt(
         Math.pow(charge2.X - charge1.X, 2) + Math.pow(charge2.Y - charge1.Y, 2) + Math.pow(charge2.Z - charge1.Z, 2)
       );
+
       const FORCE =
         (K * (charge1.magnitude * MINIMUN_CHARGE) * (charge2.magnitude * MINIMUN_CHARGE)) / Math.pow(squareSum, 3);
 
